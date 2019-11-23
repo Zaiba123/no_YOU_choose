@@ -1,29 +1,23 @@
-/*.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-*/
 .bg-dark {
   background-color: #00cdcd!important;
 }
 .navbar-dark .navbar-brand {
-  color: #ff0000;
+  font-size: 55px;
+font-family: 'Futura';
+color: #fff;
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+text-align: center;
+animation: glow 1s ease-in-out infinite alternate;
+-moz-animation: glow 1s ease-in-out infinite alternate;
+-webkit-animation: glow 1s ease-in-out infinite alternate;
+
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,.5);
+  font-size: 22px;
+}
+/* color: #ff0000; */
+.aboutus{
+  color:orange;
 }
