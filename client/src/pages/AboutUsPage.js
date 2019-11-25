@@ -1,8 +1,9 @@
 import React from 'react';
+import randomizer from '../components/randomizer'
 
 function AboutUsPage(props) {
   return (
-    <div></div>
+    randomizer
   );
 }
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 /*.App {
   text-align: center;
 }
@@ -22,8 +23,11 @@
 }
 */
 .bg-dark {
-  background-color: #00cdcd!important;
+  background-color: turquoise!important;
 }
 .navbar-dark .navbar-brand {
-  color: #ff0000;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-shadow: 0 0 10px rgb(255, 7, 214);
+  
 }
