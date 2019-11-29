@@ -1,40 +1,58 @@
+//import React from 'react';
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-class RestaurantsPage extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      restaurants: {}
+
+class Items extends React.Component {
+  constructor(){
+    super();
+
+    this.state={
+      'items':[]
     }
   }
-
-  componentDidMount = () => {
-    this.getListOfRestaurants();
+  componentDidMount(){
+    this.getItems();
+  }
+  getItems(){
+    fetch('/api/places/')
+    .then(results => results.json())
+    .then(results => this.setState({'items':results}));
   }
 
-  getListOfRestaurants = () => {
-    fetch('/api/places')
-    .then(res => res.json())
-    .then(res => this.setState({
-      restaurants: res
-    }));
-  }
+  // getListOfRestaurants = () => {
+  //   fetch('/api/places')
+  //   .then(res => res.json)
+  // }
 
+  success(pos) {
+    var crd = pos.coords;
+    var lng = pos.coords.longitude;
+    var lat = pos.coords.latitude;
+    fetch('/api/places?lat='+lat+'2&lng='+lng+'&keyword=pizza')
+    .then(results => results.json())
+    .then(results => this.setState({'items': results}));
   
-
-  getRandomRestaurant = () => {
-    
+    console.log('Your current position is:');
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude: ${crd.longitude}`);
+    console.log(`More or less ${crd.accuracy} meters.`);
   }
 
   render() {
     return (
-      <div>Lists of Restaurants
-        <button onClick={this.getListOfRestaurants}>Get random restaurant!</button>
-      </div>
-      
+      <div> {this.state.getItems}</div>
+      // <ul>{this.state.items.map(function(item,index){
+      //   return <RestaurantsPage item={item} key={index} />
+      // })}</ul>
     )
   }
 }
 
-export default RestaurantsPage;
+ReactDOM.render(
+  <Items />,
+  document.getElementById('root')
+);
+
+export default Items;

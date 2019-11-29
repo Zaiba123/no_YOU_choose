@@ -28,6 +28,8 @@ function success(pos) {
   .then(res => res.json())
   .then(res => console.log(res))
 
+  //.then(results => this.setState({'restaurants': results}) );
+
   console.log('Your current position is:');
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);

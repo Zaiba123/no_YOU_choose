@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-/*.App {
+.App {
   text-align: center;
 }
 
@@ -7,7 +7,7 @@
   background-color: #00cdcd!important;
 }
 .navbar-dark .navbar-brand {
-  font-size: 55px;
+  font-size: 40px;
 font-family: 'Futura';
 color: #fff;
 text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
@@ -28,9 +28,9 @@ animation: glow 1s ease-in-out infinite alternate;
 .App-link {
   color: #09d3ac;
 }
-*/
 
-.navbar-dark .navbar-brand {
+
+/* .navbar-dark .navbar-brand {
   color: white;
   font-family: ‘Quicksand’, sans-serif;
   text-shadow: 0 0 10px rgb(255, 7, 214);
@@ -38,7 +38,7 @@ animation: glow 1s ease-in-out infinite alternate;
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.5);
   font-size: 22px;
-}
+} */
 .bg-dark {
   background-color: #00CDCD!important;
 }
