@@ -6,15 +6,13 @@ import {
   Link,
   NavLink
 } from 'react-router-dom';
-import PostsListPage from './pages/PostsListPage';
-import PostFormPage from './pages/PostFormPage';
-import ShowPostPage from './pages/ShowPostPage';
+// import PostsListPage from './pages/PostsListPage';
+import Random from "./pages/Random";
+// import ShowPostPage from './pages/ShowPostPage';
 import AboutUsPage from './pages/AboutUsPage';
 import RestaurantsPage from './pages/RestaurantsPage';
-
+import Incoming from './pages/Incoming';
 import './App.css';
-
-
 function Navigation(props) {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
@@ -32,8 +30,8 @@ function Navigation(props) {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" exact to="/posts/new">
-            User *incoming*
+          <NavLink className="nav-link" exact to="/incoming">
+            Incoming
           </NavLink>
         </li>
 
@@ -41,13 +39,22 @@ function Navigation(props) {
     </nav>
   );
 }
-
-
 class App extends React.Component {
   render() {
     return (
       <Router>
         <Navigation />
+        <div className="bg">
+          <div className="container-fluid text-center" >
+            <div className="row justify-content-center">
+              <Switch>
+                <Route path="/incoming" component={Incoming} />
+                <Route path="/restaurants" component={RestaurantsPage} />
+                <Route path="/about-us" component={AboutUsPage} />
+                <Route path="/" component={Random} />
+              </Switch>
+            </div>
+
         <div className="container-fluid text-center">
           <div className="row justify-content-center">
             <Switch>
@@ -63,6 +70,4 @@ class App extends React.Component {
     );
   }
 }
-
-
 export default App;
